@@ -5,11 +5,11 @@ describe "tasks/index" do
     assign(:tasks, [
       stub_model(Task,
         :description => "Description",
-        :team => ""
+        :team => Team.create( name: "Stooges" )
       ),
       stub_model(Task,
         :description => "Description",
-        :team => ""
+        :team => Team.create( name: "Ninja Turtles" )
       )
     ])
   end

@@ -4,7 +4,9 @@ describe "tasks/show" do
   before(:each) do
     @task = assign(:task, stub_model(Task,
       :description => "Description",
-      :team => ""
+      :team => stub_model(Team,
+                          :name => "Mongrels"
+                         )
     ))
   end
 
@@ -12,6 +14,6 @@ describe "tasks/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Description/)
-    rendered.should match(//)
+    rendered.should match(/Mongrels/)
   end
 end

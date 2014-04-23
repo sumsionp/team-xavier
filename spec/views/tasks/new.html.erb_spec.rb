@@ -4,7 +4,9 @@ describe "tasks/new" do
   before(:each) do
     assign(:task, stub_model(Task,
       :description => "MyString",
-      :team => ""
+      :team => stub_model(Team,
+                          :name => "Helpful Hooligans"
+                         ).as_new_record
     ).as_new_record)
   end
 

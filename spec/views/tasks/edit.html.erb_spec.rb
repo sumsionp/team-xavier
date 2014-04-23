@@ -4,7 +4,7 @@ describe "tasks/edit" do
   before(:each) do
     @task = assign(:task, stub_model(Task,
       :description => "MyString",
-      :team => ""
+      :team => Team.create( name: "Mutany" )
     ))
   end
 
