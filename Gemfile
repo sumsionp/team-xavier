@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # Use rspec for test framework
 gem 'rspec-rails', '~>2.14.2', group: :test
 
+# Add rb-readline since it errored when running rails c
+gem 'rb-readline', '~>0.5.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
