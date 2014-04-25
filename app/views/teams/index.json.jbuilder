@@ -1,4 +1,4 @@
 json.array!(@teams) do |team|
-  json.extract! team, :id, :name, :team_lead
+  json.extract! team, :id, :name
   json.url team_url(team, format: :json)
 end
